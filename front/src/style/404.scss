@@ -1,0 +1,18 @@
+.D404{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 159px;
+    p, a{
+        color: #FF6060;
+    }
+    p:nth-child(1){
+        font-size: 288px;
+        font-weight: bold;
+        margin-top: 200px;
+    }p:nth-child(2){
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,47 @@
+.CardsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 43px;
+    background-color: #E5E5E5;
+    border-radius: 25px;
+    padding: 50px 56px;
+    .Card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 43px;
+        width: 340px;
+        min-width: 340px;
+        height: 340px;
+        min-height: 340px;
+        border-radius: 10px;
+        color: white;
+        img{
+            position: absolute;
+            object-fit: cover;
+            border-radius: 10px;
+            width: 340px;
+            min-width: 340px;
+            height: 340px;
+            min-height: 340px;
+        }.effect{
+            position: absolute;
+            background: linear-gradient(transparent, black 200%);
+            border-radius: 10px;
+            width: 340px;
+            min-width: 340px;
+            height: 340px;
+            min-height: 340px;
+        }p{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin: 170px 0 0 20px;
+            z-index: 1;
+            width: 140px;
+            height: 150px;
+            font-size: 18px;
+        }
+    }
+}
