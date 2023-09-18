@@ -103,7 +103,7 @@ main{
     gap: 20px;
     margin: 40px 20px;
     width: calc(100vw - 40px);
-    font-size: 12px;
+    font-size: 15px;
   }.App-footer{
     p{
       font-size: 12px;
@@ -162,9 +162,18 @@ main{
     }
   }
 }
+
+
 .Dropdowns{
   margin-top: 33px;
+  .Dropdown-content{
+    animation-name: dropdown;
+    animation-duration: .5s;
+  }
   &.close{
+    .Dropdown-title{
+      border-radius: 5px;
+    }
     .Dropdown-title .arrow{
       transform: rotate(-90deg) scaleY(2.5);
     }.Dropdown-content{
@@ -172,6 +181,7 @@ main{
     }
   }&.open{
     .Dropdown-title{
+      border-radius: 5px 5px 0 0;
       .arrow{
         transform: rotate(90deg) scaleY(2.5);
       }
@@ -188,8 +198,10 @@ main{
       color: #FF6060;
       background-color: #F6F6F6;
       padding: 25px 15px;
-      border-radius: 5px;
+      border-radius: 0 0 5px 5px;
+      height: fit-content;
       line-height: 1.5;
+      transform: height fit-content;
     }
   }
   .Dropdown-title{
@@ -199,7 +211,7 @@ main{
     justify-content: space-between;
     align-items: center;
     background-color: #FF6060;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     color: white;
     .title{
       margin-left: 18px;
@@ -209,5 +221,15 @@ main{
     .arrow{
       margin-right: 18px;
     }
+  }
+}
+
+@keyframes dropdown {
+  from {
+    transform-origin: top;
+    transform:scaleY(0) translateY(-50px);
+  }
+  to {
+    transform: scaleY(1) translateY(0);
   }
 }

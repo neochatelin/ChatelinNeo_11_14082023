@@ -19,7 +19,7 @@ const API = {
         }).then(data=>{
             let elem = data.find((elem)=>ID === elem.id);
             if (!elem) {
-                return Promise.reject("obj not fund")
+                return "data not found"
             }
             return elem
         }).catch((error)=>{throw error});
