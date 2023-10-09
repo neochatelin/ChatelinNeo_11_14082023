@@ -4,7 +4,7 @@ import Dropdowns from "../components/Dropdowns";
 
 const APropos = ()=>{
     return(
-        <main>
+        <main className="A-Props">
             <div className="App-content">
                 <ImgComponent img="/assets/img_aPropos.png" text=""/>
                 <Dropdowns title="Fiabilité" content={["Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."]}/>

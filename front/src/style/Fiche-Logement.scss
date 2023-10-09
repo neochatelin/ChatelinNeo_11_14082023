@@ -1,5 +1,12 @@
-.App-content{
+.Fiche-Logement{
+    max-width: 1241px !important;
+    margin: 0 100px;
+    width: calc(100% - 200px);
     .lightbox{
+        margin-top: -50px;
+        &.preview{
+            margin-top: 56px;
+        }
         width: 100%;
         .hidden{
             opacity: 0;
@@ -7,8 +14,7 @@
         .index{
             position: relative;
             font-size: 18px;
-            height: 0;
-            top: calc(28.819vw - 35px);
+            top: calc(415px - 35px);
             color: white;
             width: fit-content;
             left: calc((100%/2) - (24px/2));
@@ -19,46 +25,63 @@
             background-color: transparent;
             border: none;
             &:nth-child(1){
-                top: calc((((28.819vw + 47px) /2)) + (47px / 2));
+                top: calc((((415px + 47px) /2)) + (47px / 2));
                 left: 20px;
             }&:nth-child(2){
-                top: calc((((28.819vw + 47px) /2)) + (47px / 2));
+                top: calc((((415px + 47px) /2)) + (47px / 2));
                 left: calc(100% - (47px * 2) - 20px);
             }
         }
         img, .lightboxImg{
             width: 100%;
-            height: 28.819vw;
+            height: 415px;
             object-fit: cover;
-            object-position: right 50% bottom 20%; 
+            object-position: right 50% bottom 20%;
             border-radius: 25px;border-radius: 25px;
         }
     }
-    .title{
-        color: #FF6060;
-        font-size: 36px;
-    }.location{
-        color: #FF6060;
-        font-size: 18px;
-    }.tags{
-        display: flex;
-        flex-direction: row;
-        color: white;
-        padding-top: 20px;
-        *{
-            background-color: #FF6060;
-            height: 25px;
-            padding: 0 15px;
-            margin-right: 10px;
-            border-radius: 10px;
+    .info{
+        width: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 50px 0;
+            .title{
+                color: #FF6060;
+                font-size: 36px;
+            }.location{
+                color: #FF6060;
+                font-size: 18px;
+            }.tags{
+                display: flex;
+                flex-direction: row;
+                color: white;
+                padding-top: 20px;
+                *{
+                    background-color: #FF6060;
+                    height: 25px;
+                    padding: 0 15px;
+                    margin-right: 10px;
+                    border-radius: 10px;
+                    width: fit-content;
+                    overflow-y: hidden;
+                }
+            }
+        }.info-dropdowns{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 50px;
+            .Dropdowns{
+                width: 582px;
+                max-width: 582px;
+            }
         }
     }
-    .content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 50px 0;
-    }
+    
 }
 
 .Host-card{
@@ -94,4 +117,103 @@
 .gray{
     background-color: gray;
     color: gray;
+}
+
+
+@media screen and (max-width: 705px){
+    .Fiche-Logement{
+        margin: 0 20px 40px 20px !important;
+        width: calc(100% - 40px) !important;
+        .lightbox{
+            & .gray{
+                height: 255px;
+            }
+            button{
+                width: 24px;
+                svg{
+                    width: 24px;
+                }
+                &:nth-child(1){
+                    top: calc((24px*2 + (255px/2)) + (24px/2));
+                    left: 20px;
+                }&:nth-child(2){
+                    top: calc((24px*2 + (255px/2)) + (24px/2));
+                    left: calc(100% - (24px * 2) - 20px);
+                }
+            }
+            .index{
+                top: calc(255px - 35px);
+            }
+            img{
+                height: 255px;
+            }
+        }
+        .content{
+            flex-direction: column !important;
+            margin-bottom: -20px !important;
+            .content1{
+                .title{
+                    font-size: 18px !important;
+                }.location{
+                    font-size: 14px !important;
+                }.tags{
+                    li{
+                        font-size: 10px !important;
+                        height: 18px !important;
+                        border-radius: 5px !important;
+                        padding: 2px 10px 0 10px !important;
+                    }
+                }
+            }
+            .content2{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                .Host-card{
+                    flex-direction: row-reverse !important;
+                    justify-items: center !important;
+                    gap: 11px;
+                    img{
+                        margin: auto;
+                        width: 32px;
+                        height: 32px;
+                    }
+                    div{
+                        justify-content: center !important;
+                        margin: 0 !important;
+                        p{
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+                .stars{
+                    gap: 2px !important;
+                    .filled-star, .empty-star{
+                        height: 22px !important;
+                        svg{
+                            width: 18px !important;
+                            height: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+        .info-dropdowns{
+            flex-direction: column !important;
+            gap: 0 !important;
+            .Dropdowns{
+                width: 100% !important;
+                max-width: 100% !important;
+                .Dropdown-title{
+                    height: 30px;
+                    .title{
+                        font-size: 13px;
+                    }
+                    .arrow{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
 }

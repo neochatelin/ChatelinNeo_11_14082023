@@ -27,11 +27,11 @@ const FicheLogement = ()=>{
 
     if(isLoaded){
         return(
-            <main className="App-content">
+            <main className="App-content Fiche-Logement">
                 <Lightbox data={data.pictures}/>
                 <div className="info">
                     <div className="content">
-                        <div>
+                        <div className="content1">
                             <p className="title">{data.title}</p>
                             <p className="location">{data.location}</p>
                             <ul className="tags">
@@ -40,12 +40,12 @@ const FicheLogement = ()=>{
                                 }
                             </ul>
                         </div>
-                        <div>
+                        <div className="content2">
                             <Host name={data.host.name} picture={data.host.picture}/>
                             <Rating rate={data.rating}/>
                         </div>
                     </div>
-                    <div>
+                    <div className="info-dropdowns">
                         <Dropdowns title="Description" isList={false} content={data.description}/>
                         <Dropdowns title="Équipements" isList={true} content={data.equipments}/>
                     </div>
@@ -54,8 +54,8 @@ const FicheLogement = ()=>{
         );
     }else{
         return(
-            <main className="App-content">
-                <div className="lightbox">
+            <main className="App-content Fiche-Logement">
+                <div className="lightbox preview">
                     <div className="gray lightboxImg"></div>
                 </div>
                 <div className="info">
@@ -106,8 +106,8 @@ const FicheLogement = ()=>{
                             </div>
                         </div>
                     </div>
-                    <div>
-                    <div className={"Dropdowns close"} >
+                    <div className="info-dropdowns">
+                        <div className={"Dropdowns close"} >
                             <div className="Dropdown-title">
                                 <p className="title">Description</p>
                                 <p className="arrow">{'>'}</p>

@@ -1,47 +1,90 @@
-.CardsContainer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 43px;
-    background-color: #E5E5E5;
-    border-radius: 25px;
-    padding: 50px 56px;
-    .Card{
+.Home{
+    max-width: 1241px !important;
+    margin: 0 100px;
+    .CardsContainer{
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
-        flex-direction: column;
-        margin-bottom: 43px;
-        width: 340px;
-        min-width: 340px;
-        height: 340px;
-        min-height: 340px;
-        border-radius: 10px;
-        color: white;
-        img{
-            position: absolute;
-            object-fit: cover;
-            border-radius: 10px;
-            width: 340px;
-            min-width: 340px;
-            height: 340px;
-            min-height: 340px;
-        }.effect{
-            position: absolute;
-            background: linear-gradient(transparent, black 200%);
-            border-radius: 10px;
-            width: 340px;
-            min-width: 340px;
-            height: 340px;
-            min-height: 340px;
-        }p{
+        margin-top: 43px;
+        background-color: #E5E5E5;
+        border-radius: 25px;
+        padding: 50px 56px;
+        .Card{
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            margin: 170px 0 0 20px;
-            z-index: 1;
-            width: 140px;
-            height: 150px;
-            font-size: 18px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 43px;
+            width: 340px;
+            height: 340px;
+            border-radius: 10px;
+            color: white;
+            img{
+                position: absolute;
+                object-fit: cover;
+                border-radius: 10px;
+                width: 340px;
+                height: 340px;
+            }.effect{
+                position: absolute;
+                background: linear-gradient(transparent, black 200%);
+                border-radius: 10px;
+                width: 340px;
+                height: 340px;
+            }p{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin: 170px 0 0 20px;
+                z-index: 1;
+                width: 140px;
+                height: 150px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .Home{
+        margin: 0 20px !important;
+        .ImgComponent{
+            p{
+                padding-top: 30px!important;
+                padding-left: 16px;
+                width: 217px !important;
+                text-align: start !important;
+                font-size: 24px!important;
+            }
+            img{
+                height: 111px!important;
+            }
+            &::before{
+                width: calc(100% - 40px)!important;
+                height: 111px!important;
+            }
+        }
+    }
+    .CardsContainer{
+        margin-top: 43px!important;
+        padding: 50px 0px!important;
+        background-color: white!important;
+        justify-content: start !important;
+        .Card{
+            margin-bottom: 43px!important;
+            width: calc(100% - 40px)!important;
+            height: 255px!important;
+            img{
+                width: calc(100% - 40px)!important;
+                height: 255px!important;
+            }.effect{
+                width: calc(100% - 40px)!important;
+                height: 255px!important;
+            }p{
+                margin: -10px 0 0 15px !important;
+                width: 140px!important;
+                height: 255px!important;
+                font-size: 18px!important;
+            }
         }
     }
 }

@@ -1,0 +1,25 @@
+.A-Props{
+    width: calc(100% - 200px);
+    margin: 0 100px;
+    .Dropdowns{
+        margin: 33px 100px 0 100px;
+    }
+}
+@media screen and (max-width: 800px){
+    .A-Props{
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        .ImgComponent{
+            img{
+                height: 111px;
+            }
+            &::before{
+                width: calc(100% - 40px);
+                height: 111px;
+            }
+        }
+        .Dropdowns{
+            margin: 33px 0 0 0;
+        }
+    }
+}

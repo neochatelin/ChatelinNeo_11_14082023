@@ -19,7 +19,7 @@ const Home = ()=>{
     return(
             <main>
                 {isLoaded ? 
-                    <div className="App-content">
+                    <div className="App-content Home">
                         <ImgComponent img="/assets/img_home.png" text="Chez vous, partout et ailleurs"/>
                         <div className="CardsContainer">
                             {data.map (elem => (
