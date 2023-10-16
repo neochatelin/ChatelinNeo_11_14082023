@@ -75,11 +75,16 @@
       margin: 51px 0;
       filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(54deg) brightness(101%) contrast(90%);
     }
+    .text{
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 
 @media screen and (max-width: 600px){
   .App-header{
+    padding: 20px 0 27px 0 !important;
     font-size: 12px !important;
     div {
       padding-right: 20px !important;
@@ -100,6 +105,9 @@
     font-size: 12px !important;
     img{
       margin: 34px 0 !important;
+    }
+    .text{
+      flex-direction: column !important;
     }
   }
 }

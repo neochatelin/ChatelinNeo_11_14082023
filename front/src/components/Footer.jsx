@@ -4,7 +4,10 @@ const Footer = ()=>{
     return(
         <footer className="App-footer">
             <img src={window.location.origin+"/assets/logo.svg"} alt="Logo kasa"/>
-            <p>© 2020 Kasa. All rights reserved</p>
+            <div className="text">
+                <p>© 2020 Kasa. All</p>
+                <p>rights reserved</p>
+            </div>
         </footer>
     );
 };
